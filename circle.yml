@@ -7,7 +7,9 @@ machine:
 dependencies:
   pre:
     - gem install serverspec infrataster docker-api
+    - test/clone_samplecode.sh
 test:
   override:
-    - docker build -t circleci
+    - docker build -t ci/base .
+    - docker build -t ci/test -f test/Dockerfile .
 
