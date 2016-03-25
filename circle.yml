@@ -14,4 +14,8 @@ test:
     - docker build -t ci/test -f test/Dockerfile .
     - test/run_and_wait_supervisord.sh
     - curl -vf localhost
-
+deployment:
+  add_test:
+    branch: add_test
+    commands:
+      - curl -H "Content-Type: application/json" --data '{"source_type": "Branch", "source_name": "add_test"}' -X POST https://registry.hub.docker.com/u/sawanoboly/ubuntu-apache2-python/trigger/${DOCKERHUB_BUILD_TOKEN}/
