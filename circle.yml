@@ -6,6 +6,7 @@ machine:
     - docker
 dependencies:
   pre:
+    - git tad -d 2.7
     - test/clone_samplecode.sh
 test:
   override:
