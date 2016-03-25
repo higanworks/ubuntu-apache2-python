@@ -6,7 +6,7 @@ machine:
     - docker
 dependencies:
   pre:
-    - gem install serverspec infrataster docker-api
+    # - gem install serverspec infrataster docker-api
     - test/clone_samplecode.sh
 test:
   override:
