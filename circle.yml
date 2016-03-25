@@ -18,6 +18,7 @@ deployment:
     branch: add_test
     commands:
       - test/push_image_to_hub.sh
+  python2:
     branch: 2.7
     commands:
       - test/push_image_to_hub.sh
