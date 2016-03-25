@@ -16,6 +16,6 @@ test:
     - curl -vf localhost
 deployment:
   release:
-    branch: [2.7]
+    branch: ["2.7"]
     commands:
       - test/push_image_to_hub.sh
