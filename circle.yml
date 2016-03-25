@@ -9,5 +9,5 @@ dependencies:
     - gem install serverspec infrataster docker-api
 test:
   override:
-    - docker build -t ci/${CIRCLE_BRANCH} .
+    - docker build -t circleci
 
