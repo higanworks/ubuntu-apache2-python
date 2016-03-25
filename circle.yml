@@ -13,5 +13,5 @@ test:
     - docker build -t ci/base .
     - docker build -t ci/test -f test/Dockerfile .
     - test/run_and_wait_supervisord.sh
-    - curl -f localhost
+    - curl -vf localhost
 
