@@ -18,4 +18,4 @@ deployment:
   add_test:
     branch: add_test
     commands:
-      - curl -H "Content-Type: application/json" --data '{"source_type": "Branch", "source_name": "add_test"}' -X POST https://registry.hub.docker.com/u/sawanoboly/ubuntu-apache2-python/trigger/${DOCKERHUB_BUILD_TOKEN}/
+      - test/push_image_to_hub.sh
