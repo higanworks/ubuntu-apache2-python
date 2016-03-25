@@ -19,3 +19,7 @@ deployment:
     branch: [2.7]
     commands:
       - test/push_image_to_hub.sh
+  deploy_test:
+    branch: "2.0"
+    commands:
+      - /bin/true
