@@ -6,7 +6,6 @@ machine:
     - docker
 dependencies:
   pre:
-    # - gem install serverspec infrataster docker-api
     - test/clone_samplecode.sh
 test:
   override:
@@ -17,5 +16,8 @@ test:
 deployment:
   add_test:
     branch: add_test
+    commands:
+      - test/push_image_to_hub.sh
+    branch: 2.7
     commands:
       - test/push_image_to_hub.sh
