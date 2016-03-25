@@ -14,11 +14,7 @@ test:
     - test/run_and_wait_supervisord.sh
     - curl -vf localhost
 deployment:
-  add_test:
-    branch: add_test
-    commands:
-      - test/push_image_to_hub.sh
-  python2:
-    branch: 2.7
+  release:
+    branch: [2.7]
     commands:
       - test/push_image_to_hub.sh
